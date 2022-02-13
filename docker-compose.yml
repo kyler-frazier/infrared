@@ -1,12 +1,11 @@
 version: "3.5"
 
 services:
-  infrared:
+  master-infrared:
     build: .
     image: kainosekai/infrared:latest
-    container_name: infrared
-    networks:
-      - infrared
+    container_name: master-infrared
+    network_mode: "host"
     restart: unless-stopped
     stdin_open: true
     tty: true
@@ -16,7 +15,3 @@ services:
       - ../configs:/configs
     environment:
       INFRARED_CONFIG_PATH: /configs
-
-networks:
-  infrared:
-    name: infrared

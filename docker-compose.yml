@@ -12,6 +12,6 @@ services:
     ports:
       - 25565:25565/tcp
     volumes:
-      - ../configs:/configs
+      - ./configs:/configs
     environment:
       INFRARED_CONFIG_PATH: /configs

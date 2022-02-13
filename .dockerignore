@@ -1,5 +1,13 @@
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
 # Git
 **/.git*
+
+# VSCode
+**/.vscode
 
 # Proxy configurations
 configs/

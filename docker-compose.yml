@@ -3,7 +3,7 @@ version: "3.5"
 services:
   master-infrared:
     build: .
-    image: kainosekai/infrared:latest
+    image: kainosekai/infrared:master
     container_name: master-infrared
     network_mode: "host"
     restart: unless-stopped

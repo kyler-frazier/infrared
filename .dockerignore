@@ -1,5 +1,5 @@
 # Git
-.git*
+**/.git*
 
 # Proxy configurations
 configs/

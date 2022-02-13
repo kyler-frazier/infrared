@@ -3,7 +3,7 @@ version: "3.5"
 services:
   local-infrared:
     build: .
-    image: kainosekai/infrared:latest
+    image: kainosekai/infrared:local
     container_name: local-infrared
     networks:
       - infrared

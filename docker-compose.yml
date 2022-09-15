@@ -5,13 +5,18 @@ services:
     build: .
     image: kainosekai/infrared:master
     container_name: master-infrared
-    network_mode: "host"
     restart: unless-stopped
     stdin_open: true
     tty: true
+    networks:
+      - minecraft
     ports:
       - 25565:25565/tcp
     volumes:
       - ./configs:/configs
     environment:
       INFRARED_CONFIG_PATH: /configs
+
+networks:
+  minecraft:
+    name: minecraft

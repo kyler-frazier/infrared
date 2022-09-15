@@ -5,18 +5,18 @@ services:
     build: .
     image: kainosekai/infrared:local
     container_name: local-infrared
-    networks:
-      - infrared
     restart: unless-stopped
     stdin_open: true
     tty: true
-    ports:
-      - 25566:25565/tcp
+    networks:
+      - minecraft
+    expose:
+      - 25565/tcp
     volumes:
       - ./configs:/configs
     environment:
       INFRARED_CONFIG_PATH: /configs
 
 networks:
-  infrared:
-    name: infrared
+  minecraft:
+    name: minecraft
